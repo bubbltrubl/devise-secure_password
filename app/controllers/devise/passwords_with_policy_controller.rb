@@ -13,7 +13,7 @@ module Devise
         prepare_for_redirect
         redirect_to stored_location_for(scope_name) || :root
       else
-        render :edit
+        render :edit, :unprocessable_content
       end
     end
 
